@@ -1,0 +1,9 @@
+.env
+app/templates_*
+*__pycache__*
+color-scheme*
+boostrap_drag_and_drop.html
+log*
+launch.sh
+venv
+.vscode

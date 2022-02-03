@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+      <form method="post"  class='form-group'>
+        <fieldset>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.letterfield.label() }}<br>
+                {{ form.letterfield(class="letters") }}
+            </p>
+
+        <!-- {% if letters %} -->
+
+        Now, enter the pattern of the missing word, using asterisks ("*") 
+                    for missing letters - "<span class="letters-sm">hor*e</span>", say,
+                    or "<span class="letters-sm">d*g</span>".<br>
+                    {{ form.id(hidden=True, value=1) }}
+
+                    {{ form.patternfield(class="letters") }}
+        <!-- {% endif %} -->
+                </p>
+                    <p>{{ form.submit(class="btn btn-primary") }}</p>
+                    </fieldset>
+                </form>
+        </div>
+
+
+
+    {% endblock %}

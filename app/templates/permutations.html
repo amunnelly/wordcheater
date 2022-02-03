@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <p>
+        The original world-wheel contained <span class="letters-sm">{{ letters }}</span>.
+    </p>
+    <p>
+        The pattern you entered was <span class="letters-sm">{{ pattern }}</span>.
+    </p>
+
+</div>
+
+
+<div>
+    {% if perms|length ==0 %}
+    <p>There are no possible permutations of <span class="letters-sm">{{ letters }}</span> that
+    match the pattern <span class="letters-sm">{{ pattern }}</span>. Would you like to <a href="{{ url_for('index') }}">try again</a>?
+</p>
+    {% elif perms|length == 1 %}
+    <p>We found just one possible match - it's <span class="letters-sm">{{ perms[0] }}</span></p>
+    {% else%}
+
+    We found {{ perms|length }} possibilites. Here they are:
+    <ol>
+        {% for perm in perms %}
+            <li>{{ perm }}</li>
+        {% endfor %}
+
+    </ol>
+    {% endif %}
+</div>
+
+
+Go <a href="{{ url_for('index') }}">again</a>?
+
+    {% endblock %}

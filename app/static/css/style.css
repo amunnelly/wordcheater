@@ -1,0 +1,37 @@
+body{
+    background-color: #F7E9D4;
+    color: #1B3409;
+}
+
+nav.navbar > .container{
+    background-color: #FB9902;
+}
+.nav-link {
+    background-color: #FB9902;
+    color: #8601AF;
+    font-family: sans-serif;  
+}
+
+.letters {
+    font-family: Menlo, monospace;
+    font-size: large;
+}
+
+.letters-sm {
+    font-family: Menlo, monospace;
+}
+
+li {
+    font-family: Menlo, monospace;
+
+}
+
+.btn {
+    background-color: #1B3409;
+    color: #F7E9D4;
+    border: 1px solid #1B3409;
+}
+
+.btn:hover {
+    background-color: #FB9902;
+}
