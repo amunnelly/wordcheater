@@ -19,7 +19,7 @@
     match the pattern <span class="letters-sm">{{ pattern }}</span>. Would you like to <a href="{{ url_for('index') }}">try again</a>?
 </p>
     {% elif perms|length == 1 %}
-    <p>We found just one possible match - it's <span class="letters-sm">{{ perms[0] }}</span></p>
+    <p>We found just one possible match - it's <span class="letters-sm">{{ perms[0] }}</span>.</p>
     {% else%}
 
     We found {{ perms|length }} possibilites. Here they are:
@@ -32,7 +32,9 @@
     {% endif %}
 </div>
 
+{% if perms|length !=0 %}
 
 Go <a href="{{ url_for('index') }}">again</a>?
+{% endif %}
 
     {% endblock %}
